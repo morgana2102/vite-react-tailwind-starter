@@ -1,9 +1,9 @@
 import { Quiz } from "../types/Quiz";
 
 export const quizBank: Record<string, Quiz> = {
-  "ham-so": {
-    title: "Đề luyện tập: Hàm số bậc nhất",
-    topic: "Hàm số",
+  "ham-so-bac-nhat": {
+    title: "Hàm số bậc nhất",
+    topic: "ham-so",
     time_limit_minutes: 10,
     questions: [
       {
@@ -29,8 +29,8 @@ export const quizBank: Record<string, Quiz> = {
     ]
   },
   "pt-bac-2": {
-    title: "Đề luyện tập: Phương trình bậc hai",
-    topic: "Phương trình",
+    title: "Phương trình bậc hai",
+    topic: "ham-so",
     time_limit_minutes: 12,
     questions: [
       {

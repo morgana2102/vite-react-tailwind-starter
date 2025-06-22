@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { quizBank } from "@/data/quiz-bank";
+import { topics } from "@/data/topics";
 
 export default function TopicDetailPage() {
   const { topicId } = useParams();
@@ -11,9 +12,13 @@ export default function TopicDetailPage() {
     return <div className="p-4">Không có đề nào cho chủ đề này.</div>;
   }
 
+  // Tìm topic name
+  const topic = topics.find((t) => t.id === topicId);
+  const topicName = topic ? topic.name : topicId;
+
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Các đề thuộc chủ đề: <span className="capitalize">{topicId}</span></h1>
+      <h1 className="text-2xl font-bold mb-4">Các đề thuộc chủ đề: <span className="capitalize">{topicName}</span></h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {quizzes.map((quiz) => (
           <Link
